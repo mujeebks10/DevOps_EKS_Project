@@ -10,8 +10,8 @@ pipeline {
                 CleanWs()
             }
         }
-        stage{
-            steps("Checkout from SCM") {
+        stage ("Checkout from SCM"){
+            steps {
                 git credentialsId: 'github', url: 'https://github.com/mujeebks10/DevOps_EKS_Project.git'
             }
         }
