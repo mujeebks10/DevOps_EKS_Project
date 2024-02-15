@@ -11,4 +11,10 @@ pipeline {
             }
         }
     }
+
+    stages ("Checkout from SCM") {
+        steps {
+            git credentialsId: 'github', url: 'https://github.com/mujeebks10/DevOps_EKS_Project.git'
+        }
+    }
 }
