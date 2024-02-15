@@ -14,7 +14,7 @@ pipeline {
 
         stage ("Checkout from SCM"){
             steps {
-                git branch: 'master', credentialsId: 'github', url: 'https://github.com/mujeebks10/DevOps_EKS_Project'
+                git credentialsId: 'github', url: 'https://github.com/mujeebks10/DevOps_EKS_Project.git'
             }
         }
     }
