@@ -5,15 +5,15 @@ pipeline {
         maven 'Maven3'
     }
     stages {
-        stage ("Cleanup Workspace") {
+        stage("Cleanup Workspace") {
             steps {
                 CleanWs()
             }
         }
     }
 
-    stages ("Checkout from SCM") {
-        steps {
+    stages("Checkout from SCM") {
+        stage {
             git credentialsId: 'github', url: 'https://github.com/mujeebks10/DevOps_EKS_Project.git'
         }
     }
