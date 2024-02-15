@@ -5,7 +5,7 @@ pipeline {
     }
 
     stages {
-        stage "(Cleanup Workspace)" {
+        stage ("Cleanup Workspace") {
             steps {
                 CleanWs()
             }
@@ -13,7 +13,7 @@ pipeline {
 
         stage ("Checkout from SCM"){
             steps {
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/mujeebks10/DevOps_EKS_Project'
+                git branch: 'Feat-03-dev3', credentialsId: 'github', url: 'https://github.com/mujeebks10/DevOps_EKS_Project'
             }
 
         }
