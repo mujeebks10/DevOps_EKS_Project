@@ -16,5 +16,11 @@ pipeline {
                 git branch: 'master', credentialsId: 'github', url: 'https://github.com/mujeebks10/DevOps_EKS_Project'
             }
         }
+
+        stage ("Build Application"){
+            steps {
+                sh "mvn clean package"
+            }
+        }
     }
 }
